@@ -7,37 +7,38 @@ assignees: ''
 
 ---
 
-# Bug Report
+## Step 1: Description
 
-## Description
+Provide a clear and concise description of the issue you encountered.
 
-Describe the issue you encountered briefly.
+## Step 2: Steps to Reproduce
 
-## Steps to Reproduce
+1. **Start**: Outline the initial action or state.
+2. **Action**: Detail the specific steps taken to reproduce the bug.
+3. **Result**: Describe the outcome or error encountered.
 
-1. Step one to reproduce the bug.
-2. Step two to reproduce the bug.
-3. Step three to reproduce the bug.
-   - Include any specific actions or conditions necessary to reproduce the issue.
+## Step 3: Expected Behavior
 
-## Expected Behavior
+Explain what you expected to happen when performing the actions outlined in Step 2.
 
-Describe what you expected to happen.
+## Step 4: Actual Behavior
 
-## Actual Behavior
+Detail what occurred when following the steps in Step 2, including any errors or unexpected behaviour observed.
 
-Describe what actually happened instead.
+## Step 5: Screenshots (if applicable)
 
-## Screenshots
+Include screenshots or videos that illustrate the bug encountered. This visual aid can greatly assist in understanding the issue.
 
-If applicable, add screenshots to help explain your problem.
+## Step 6: Environment Details
 
-## Environment
+- **App Version**: Specify the version number of the app.
+- **Device**: Mention the device model and operating system version (e.g., iPhone 12, iOS 15.0).
+- **Additional Context**: Provide any other relevant information about your environment that may help in reproducing or understanding the bug.
 
-- **App Version**: [e.g., 1.0.0]
-- **Device**: [e.g., iPhone X, Android emulator]
-- **Operating System**: [e.g., iOS 14.5, Android 11]
+## Step 7: Additional Information
 
-## Additional Information
+Add any extra context or details about the bug that you think might be useful in diagnosing or fixing the issue.
 
-Add any other context about the problem here.
+---
+
+By following this roadmap, you can effectively report bugs, ensuring that they are reproducible and well-documented for the development team to address promptly.
