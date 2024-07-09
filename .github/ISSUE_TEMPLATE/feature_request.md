@@ -7,14 +7,31 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+---
+name: Feature Request
+about: Suggest an idea for this project
+title: "[FEATURE] "
+labels: enhancement
+assignees: ''
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+---
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Description
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+<!-- Briefly describe the feature you'd like to request. What problem does it solve or what opportunity does it provide? -->
+
+## Proposed Solution
+
+<!-- Describe the solution you'd like, including any specific functionality, behaviour, or design suggestions -->
+
+## Benefits
+
+<!-- Explain the benefits of implementing this feature -->
+
+## Alternatives or Workarounds
+
+<!-- Are there any alternatives or workarounds you've considered? -->
+
+## Additional Context
+
+<!-- Add any additional context or information that may help understand the feature request -->
