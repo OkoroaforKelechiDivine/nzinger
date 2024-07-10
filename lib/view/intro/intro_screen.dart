@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nzinga/app_theme/font_manager.dart';
+import 'package:nzinga/core/locator/locator.dart';
 import 'package:nzinga/default_settings/app_button/app_button.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
+import 'package:nzinga/view/auth/register/register_screen.dart';
 
 class AuthenticationScreen extends StatelessWidget {
   const AuthenticationScreen({super.key});
@@ -35,7 +37,9 @@ class AuthenticationScreen extends StatelessWidget {
               
               AppButton(
                 text: 'Create Account',
-                onPressed: () {},
+                onPressed: () {
+                  navigationService.pushReplacement(const RegisterScreen());
+                },
               ),
               SizedBox(height: 10.sp),
               AppButton(
