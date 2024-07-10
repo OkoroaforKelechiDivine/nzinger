@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
+import 'package:nzinga/app.dart';
+import 'package:nzinga/core/locator/locator.dart';
 
-void main() {
-  runApp(
-    const MyApp(),
-  );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  setupLocator();
+  runApp(const MyApp());
 }
