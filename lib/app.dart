@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nzinga/app_theme/theme_manager.dart';
-import 'package:nzinga/view/splash/splash_view.dart';
+import 'package:nzinga/core/locator/locator.dart';
+import 'package:nzinga/view/splash/splash_screen.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      defaultTransition: Transition.fadeIn,
-      transitionDuration: const Duration(microseconds: 40),
-      debugShowCheckedModeBanner: false,
-      title: 'Nzinga',
-      theme: getApplicationTheme(),
-      initialRoute: "/",
-      routes: {
-       "/": (context) => const SplashView(),
+    return ScreenUtilInit(
+      builder: (context, child) {
+        return GestureDetector(
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            navigatorKey: navigationService.navigatorKey,
+            title: 'Nzinger',
+            theme: getApplicationTheme(),
+            home: const SplashScreen(),
+          ),
+        );
       },
     );
   }

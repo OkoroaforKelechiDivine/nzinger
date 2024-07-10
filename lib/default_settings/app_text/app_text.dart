@@ -6,18 +6,22 @@ class AppText extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
+  final TextAlign? textAlign; // Optional parameter for text alignment
 
-  const AppText({super.key, 
+  const AppText({
+    Key? key,
     required this.text,
     this.fontSize = AppFontSize.s12,
     this.fontWeight = FontWeight.normal,
-    this.color = Colors.black, 
-  });
+    this.color = Colors.black,
+    this.textAlign, // Optional text alignment parameter
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: textAlign, // Use the provided textAlign parameter
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
@@ -26,4 +30,3 @@ class AppText extends StatelessWidget {
     );
   }
 }
-

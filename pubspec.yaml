@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^4.0.1
   dio: ^5.1.1
   get: ^4.6.5
+  get_it: ^7.6.0
   font_awesome_flutter:
   flutter_screenutil: ^5.7.0
   stacked: ^3.4.1+1
