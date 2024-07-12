@@ -42,6 +42,8 @@ dependencies:
   font_awesome_flutter:
   flutter_screenutil: ^5.7.0
   stacked: ^3.4.1+1
+  supabase_flutter: ^1.0.0
+  overlay_support: ^2.1.0
 
 dev_dependencies:
   flutter_test:

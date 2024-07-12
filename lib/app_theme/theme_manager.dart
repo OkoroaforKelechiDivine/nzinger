@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static Color white = Colors.white;
-  static Color black = const Color.fromRGBO(0, 0, 0, 1);
+  static Color black = Color.fromRGBO(0, 0, 0, 1);
   static Color green = HexColor.fromHex('#3DB86E');
-  static Color grey = HexColor.fromHex('#848586');
+  static Color lightGreen = HexColor.fromHex('#90EE90');
+  static Color red = HexColor.fromHex('#FF0000');
 }
 
 extension HexColor on Color {
