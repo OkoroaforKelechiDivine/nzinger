@@ -46,7 +46,7 @@ class HomeViewModel extends BaseViewModel {
   void generateCaption() {
     if (_image != null) {
       String imagePath = _image!.path;
-      String caption = 'Generated caption for $imagePath'; // Replace with actual caption generation logic
+      String caption = 'Generated caption for $imagePath';
       print('Generated caption: $caption');
     } else {
       print('No image selected to generate a caption.');

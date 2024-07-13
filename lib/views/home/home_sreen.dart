@@ -1,11 +1,11 @@
-import 'dart:io' if (dart.library.html) 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:nzinga/view_models/home/home_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,6 @@ class HomeScreen extends StatelessWidget {
               if (viewModel.image != null)
                 ElevatedButton(
                   onPressed: () {
-                    // Call method to generate caption
                     viewModel.generateCaption();
                   },
                   child: const Text('Generate Caption'),
