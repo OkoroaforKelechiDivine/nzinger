@@ -5,11 +5,8 @@ import 'package:nzinga/app_themes/theme_manager.dart';
 import 'package:nzinga/cores/icons/done_icon.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:overlay_support/overlay_support.dart';
-import 'package:nzinga/cores/locator/locator.dart';
-import 'package:nzinga/services/navigation_service.dart';
 
 class SnackbarService {
-  final NavigationService _navigationService = navigationService;
   final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
   void error({
