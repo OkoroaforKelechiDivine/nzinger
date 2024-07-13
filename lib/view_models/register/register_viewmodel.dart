@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nzinga/core/locator/locator.dart';
+import 'package:nzinga/cores/locator/locator.dart';
 import 'package:nzinga/services/auth_service.dart';
-import 'package:nzinga/view/auth/verify/verify.dart';
 import 'package:stacked/stacked.dart';
 
 class RegisterScreenViewModel extends BaseViewModel {
@@ -15,26 +14,15 @@ class RegisterScreenViewModel extends BaseViewModel {
       snackbarService.error(message: 'Please fill in all fields');
       return;
     }
-
     if (!_isValidEmail(email.text)) {
       snackbarService.error(message: 'Please enter a valid email address');
       return;
     }
-
     if (!_isPasswordMatching()) {
       snackbarService.error(message: 'Passwords do not match');
       return;
     }
     await _authService.signUpWithEmailPassword(email.text, password.text);
-
-    // try {
-    //   await _authService.signUpWithEmailPassword(email.text, password.text);
-    //   snackbarService.success(message: "Account successfully Created");
-    //   navigationService.push(VerifyScreen());
-    // } catch (error) {
-    //   snackbarService.error(message: "An error occurred: $error");
-    //   // Handle specific errors if needed
-    // }
   }
 
   bool _isPasswordMatching() {

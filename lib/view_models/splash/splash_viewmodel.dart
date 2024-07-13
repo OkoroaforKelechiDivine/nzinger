@@ -1,5 +1,5 @@
-import 'package:nzinga/core/locator/locator.dart';
-import 'package:nzinga/view/intro/intro_screen.dart';
+import 'package:nzinga/cores/locator/locator.dart';
+import 'package:nzinga/views/intro/intro_screen.dart';
 import 'package:stacked/stacked.dart';
 
 class SplashScreenViewModel extends BaseViewModel {

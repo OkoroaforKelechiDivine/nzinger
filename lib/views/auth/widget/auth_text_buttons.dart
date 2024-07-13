@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
+import 'package:nzinga/cores/locator/locator.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
+import 'package:nzinga/views/auth/login/login_screen.dart';
 
 class AuthTextButtons extends StatelessWidget {
-  final VoidCallback onRegisterPressed;
-  final VoidCallback onBackToLoginPressed;
+  final VoidCallback? onRegisterPressed;
+  final VoidCallback? onBackToLoginPressed;
+  final String? registerText;
+  final String? backToLoginText;
 
   const AuthTextButtons({
     super.key,
-    required this.onRegisterPressed,
-    required this.onBackToLoginPressed,
+    this.onRegisterPressed,
+    this.onBackToLoginPressed,
+    this.registerText,
+    this.backToLoginText,
   });
 
   @override
@@ -18,18 +24,18 @@ class AuthTextButtons extends StatelessWidget {
     return Row(
       children: [
         TextButton(
-          onPressed: onRegisterPressed,
+          onPressed: onRegisterPressed ?? () {},
           child: AppText(
-            text: 'Register',
+            text: registerText ?? '',
             fontWeight: AppFontWeight.bold,
             fontSize: AppFontSize.s12.sp,
           ),
         ),
         const Spacer(),
         TextButton(
-          onPressed: onBackToLoginPressed,
+          onPressed: onBackToLoginPressed ?? () {},
           child: AppText(
-            text: '< Back to Login',
+            text: backToLoginText ?? '',
             fontSize: AppFontSize.s12.sp,
           ),
         ),

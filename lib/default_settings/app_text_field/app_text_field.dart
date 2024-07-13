@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
-import 'package:nzinga/app_theme/theme_manager.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
+import 'package:nzinga/app_themes/theme_manager.dart';
 
 class AppTextField extends StatefulWidget {
   final String labelText;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nzinga/app_theme/theme_manager.dart';
-import 'package:nzinga/core/locator/locator.dart';
-import 'package:nzinga/view/auth/verify/verify.dart';
-import 'package:nzinga/view/splash/splash_screen.dart';
+import 'package:nzinga/app_themes/theme_manager.dart';
+import 'package:nzinga/cores/locator/locator.dart';
+import 'package:nzinga/views/auth/verify/verify.dart';
+import 'package:nzinga/views/splash/splash_screen.dart';
 import 'package:overlay_support/overlay_support.dart';
 
 class MyApp extends StatefulWidget {

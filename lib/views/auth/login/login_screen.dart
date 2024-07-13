@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:nzinga/default_settings/app_text_field/app_text_field.dart';
-import 'package:nzinga/view/auth/widget/auth_text_buttons.dart';
-import 'package:nzinga/view/auth/widget/sign_in_options.dart';
-import 'package:nzinga/view_model/register/register_screen_viewmodel.dart';
+import 'package:nzinga/views/auth/widget/auth_text_buttons.dart';
+import 'package:nzinga/view_models/login/login_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
-      viewModelBuilder: () => RegisterScreenViewModel(),
+      viewModelBuilder: () => LoginViewmodel(),
       builder: (context, model, child) {
         return Scaffold(
           appBar: AppBar(
             title: AppText(
-              text: 'Create Account',
+              text: 'Welcome back',
               fontSize: AppFontSize.s24.sp,
             ),
           ),
@@ -39,19 +38,13 @@ class RegisterScreen extends StatelessWidget {
                     controller: model.password,
                     obscureText: true,
                   ),
-                  SizedBox(height: 10.sp),
-                  AppTextField(
-                    labelText: 'Confirm Password',
-                    obscureText: true,
-                    controller: model.confirmPassword,
-                  ),
                   SizedBox(height: 20.sp),
                   AuthTextButtons(
-                    onRegisterPressed: model.signUp,
-                    onBackToLoginPressed: () {},
+                    backToLoginText: "Login",
+                    onBackToLoginPressed: model.signin,
                   ),
                   SizedBox(height: 20.sp),
-                  SignInWithOptions(),
+                  // SignInWithOptions(),
                 ],
               ),
             ),

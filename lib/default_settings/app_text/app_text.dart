@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
 
 class AppText extends StatelessWidget {
   final String text;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nzinga/app.dart';
-import 'package:nzinga/core/locator/locator.dart';
+import 'package:nzinga/cores/locator/locator.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {

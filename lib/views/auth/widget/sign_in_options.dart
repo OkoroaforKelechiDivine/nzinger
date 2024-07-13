@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:nzinga/default_settings/constants/app_assets.dart';
 import 'package:nzinga/services/auth_service.dart';
@@ -31,7 +31,7 @@ class SignInWithOptions extends StatelessWidget {
               ),
               iconSize: 30.sp,
               onPressed: () async{
-                await _authService.signUpWithGitHub();
+                // await _authService.signUpWithGitHub();
               },
             ),
           ],

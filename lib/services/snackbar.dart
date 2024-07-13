@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nzinga/app_theme/font_manager.dart';
-import 'package:nzinga/app_theme/theme_manager.dart';
-import 'package:nzinga/core/icons/done_icon.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
+import 'package:nzinga/app_themes/theme_manager.dart';
+import 'package:nzinga/cores/icons/done_icon.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:overlay_support/overlay_support.dart';
-import 'package:nzinga/core/locator/locator.dart';
+import 'package:nzinga/cores/locator/locator.dart';
 import 'package:nzinga/services/navigation_service.dart';
 
 class SnackbarService {
@@ -37,9 +37,9 @@ class SnackbarService {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.error,
-                      color: Colors.red,
+                      color: AppColors.red,
                       size: 32,
                     ),
                     SizedBox(width: 16.w),
@@ -58,8 +58,6 @@ class SnackbarService {
         );
       },
       duration: Duration(milliseconds: milliseconds),
-      // curve: Curves.easeInOut,
-      // slideDismissDirection: DismissDirection.vertical,
     );
   }
 
@@ -109,8 +107,6 @@ class SnackbarService {
         );
       },
       duration: Duration(milliseconds: milliseconds),
-      // curve: Curves.easeInOut,
-      // slideDismissDirection: DismissDirection.vertical,
     );
   }
 }
