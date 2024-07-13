@@ -4,7 +4,7 @@ import 'package:nzinga/app_themes/font_manager.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:nzinga/default_settings/app_text_field/app_text_field.dart';
 import 'package:nzinga/views/auth/widget/auth_text_buttons.dart';
-import 'package:nzinga/view_models/login/login_viewmodel.dart';
+import 'package:nzinga/view_models/auth/login/login_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 class LoginScreen extends StatelessWidget {

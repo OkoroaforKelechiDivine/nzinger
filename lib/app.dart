@@ -21,14 +21,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return OverlaySupport(
-      // toastTheme: ToastThemeData(
-      //   textColor: AppColors.black
-      // ),
+      toastTheme: ToastThemeData(
+        textColor: AppColors.black
+      ),
       child: ScreenUtilInit(
         builder: (context, child) {
           return GestureDetector(
             child: MaterialApp(
-              debugShowCheckedModeBanner: false,
               navigatorKey: navigationService.navigatorKey,
               title: 'Nzinger',
               theme: getApplicationTheme(),
