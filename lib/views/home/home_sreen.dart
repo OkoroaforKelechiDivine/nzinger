@@ -1,4 +1,4 @@
-import 'dart:io' if (dart.library.html) 'dart:html'; // Import dart:html for web platform
+import 'dart:io' if (dart.library.html) 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 import 'package:nzinga/view_models/home/home_viewmodel.dart';
@@ -16,9 +16,23 @@ class HomeScreen extends StatelessWidget {
           title: const AppText(text: 'Home'),
         ),
         body: Center(
-          child: viewModel.image == null
-              ? const AppText(text: 'No image selected.')
-              : Image.network(viewModel.image!.path),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              viewModel.image == null
+                  ? const AppText(text: 'No image selected.')
+                  : Image.network(viewModel.image!.path),
+              const SizedBox(height: 20),
+              if (viewModel.image != null)
+                ElevatedButton(
+                  onPressed: () {
+                    // Call method to generate caption
+                    viewModel.generateCaption();
+                  },
+                  child: const Text('Generate Caption'),
+                ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: viewModel.pickImage,

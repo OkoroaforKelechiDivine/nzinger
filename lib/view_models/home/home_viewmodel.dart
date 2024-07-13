@@ -1,4 +1,5 @@
 import 'package:image_picker/image_picker.dart';
+import 'package:nzinga/cores/locator/locator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stacked/stacked.dart';
 
@@ -36,8 +37,19 @@ class HomeViewModel extends BaseViewModel {
         _image = pickedImage;
         notifyListeners();
       }
-    } catch (e) {
-      print('Failed to pick image: $e');
+    } 
+    catch (e) {
+      snackbarService.error(message: "Failed to pick image");
+    }
+  }
+
+  void generateCaption() {
+    if (_image != null) {
+      String imagePath = _image!.path;
+      String caption = 'Generated caption for $imagePath'; // Replace with actual caption generation logic
+      print('Generated caption: $caption');
+    } else {
+      print('No image selected to generate a caption.');
     }
   }
 }
