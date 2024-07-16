@@ -46,6 +46,8 @@ dependencies:
   overlay_support: ^2.1.0
   image_picker:
   shared_preferences:
+  google_generative_ai:
+  flutter_dotenv:
 
 dev_dependencies:
   flutter_test:

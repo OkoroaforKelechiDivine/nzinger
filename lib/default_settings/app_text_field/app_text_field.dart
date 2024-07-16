@@ -6,12 +6,14 @@ class AppTextField extends StatefulWidget {
   final String labelText;
   final bool obscureText;
   final TextEditingController controller;
+  final double fontSize;
 
   const AppTextField({
     super.key,
     required this.labelText,
     this.obscureText = false,
     required this.controller,
+    this.fontSize = AppFontSize.s16, // Default font size
   });
 
   @override
@@ -39,22 +41,23 @@ class _AppTextFieldState extends State<AppTextField> {
     return TextField(
       controller: widget.controller,
       cursorColor: AppColors.black,
+      style: TextStyle(fontSize: widget.fontSize),
       decoration: InputDecoration(
         labelText: widget.labelText,
+        labelStyle: TextStyle(color: AppColors.black, fontSize: widget.fontSize),
+        floatingLabelStyle: TextStyle(color: AppColors.black, fontSize: widget.fontSize),
         border: const OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: AppColors.black,
           ),
         ),
-        labelStyle: TextStyle(color: AppColors.black),
-        floatingLabelStyle: TextStyle(color: AppColors.black),
         suffixIcon: widget.obscureText
             ? IconButton(
                 icon: Icon(
                   _obscureText ? Icons.visibility_off : Icons.visibility,
                   color: AppColors.black,
-                  size: AppFontSize.s18,
+                  size: AppFontSize.s12,
                 ),
                 onPressed: _toggleObscureText,
               )

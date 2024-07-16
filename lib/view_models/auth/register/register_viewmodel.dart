@@ -8,6 +8,17 @@ class RegisterScreenViewModel extends BaseViewModel {
   final TextEditingController password = TextEditingController();
   final TextEditingController confirmPassword = TextEditingController();
   final AuthService _authService = AuthService();
+  
+  bool _isBusy = false;
+  
+  @override
+  bool get isBusy => _isBusy;
+  
+  @override
+  setBusy(bool value) {
+    _isBusy = value;
+    notifyListeners();
+  }
 
   Future<void> signUp() async {
     if (email.text.isEmpty || password.text.isEmpty || confirmPassword.text.isEmpty) {

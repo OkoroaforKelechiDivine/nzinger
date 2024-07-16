@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
         builder: (context, child) {
           return GestureDetector(
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
               navigatorKey: navigationService.navigatorKey,
               title: 'Nzinger',
               theme: getApplicationTheme(),

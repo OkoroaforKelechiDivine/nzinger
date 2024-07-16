@@ -33,7 +33,7 @@ class HomeViewModel extends BaseViewModel {
   Future<void> pickImage() async {
     try {
       final pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-      if (pickedImage != null) {
+      if (pickedImage != null) {    
         _image = pickedImage;
         notifyListeners();
       }

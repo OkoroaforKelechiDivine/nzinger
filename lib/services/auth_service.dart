@@ -1,7 +1,6 @@
 import 'package:nzinga/cores/locator/locator.dart';
 import 'package:nzinga/view_models/home/home_viewmodel.dart';
 import 'package:nzinga/views/auth/login/login_screen.dart';
-import 'package:nzinga/views/auth/verify/verify.dart';
 import 'package:nzinga/views/home/home_sreen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,7 +12,7 @@ class AuthService {
     try {
       await _supabaseClient.auth.signUp(email: email, password: password);
       snackbarService.success(message: 'Account Created Successfully');
-      navigationService.pushAndRemoveUntil(const VerifyScreen());
+      navigationService.pushAndRemoveUntil(const HomeScreen());
     } on AuthException catch (authError) {
       snackbarService.error(message: authError.message);
     } catch (error) {

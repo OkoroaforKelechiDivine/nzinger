@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nzinga/app_themes/font_manager.dart';
 import 'package:nzinga/default_settings/app_text/app_text.dart';
 
 class AppButton extends StatelessWidget {
@@ -21,6 +22,7 @@ class AppButton extends StatelessWidget {
       ),
       child: AppText(
         text: text,
+        fontSize: AppFontSize.s12.sp,
       ),
     );
   }
