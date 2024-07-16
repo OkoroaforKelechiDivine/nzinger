@@ -12,7 +12,7 @@ class AuthService {
     try {
       await _supabaseClient.auth.signUp(email: email, password: password);
       snackbarService.success(message: 'Account Created Successfully');
-      navigationService.pushAndRemoveUntil(const HomeScreen());
+      navigationService.pushAndRemoveUntil(const LoginScreen());
     } on AuthException catch (authError) {
       snackbarService.error(message: authError.message);
     } catch (error) {

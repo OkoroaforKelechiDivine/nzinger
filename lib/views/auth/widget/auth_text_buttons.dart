@@ -25,7 +25,7 @@ class AuthTextButtons extends StatelessWidget {
           onPressed: onRegisterPressed ?? () {},
           child: AppText(
             text: registerText ?? '',
-            fontWeight: AppFontWeight.bold,
+            // fontWeight: AppFontWeight.bold,
             fontSize: AppFontSize.s12.sp,
           ),
         ),

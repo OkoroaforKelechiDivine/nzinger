@@ -35,7 +35,6 @@ class AuthenticationScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.sp),
-              
               AppButton(
                 text: 'Create Account',
                 onPressed: () {

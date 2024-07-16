@@ -8,6 +8,17 @@ class LoginViewmodel extends BaseViewModel{
   final TextEditingController password = TextEditingController();
   final AuthService _authService = AuthService();
 
+ bool _isBusy = false;
+  
+  @override
+  bool get isBusy => _isBusy;
+  
+  @override
+  setBusy(bool value) {
+    _isBusy = value;
+    notifyListeners();
+  }
+  
   Future<void>signin() async {
      if (email.text.isEmpty || password.text.isEmpty) {
       snackbarService.error(message: 'Please fill in all fields');

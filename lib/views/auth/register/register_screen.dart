@@ -33,7 +33,7 @@ class RegisterScreen extends StatelessWidget {
                         fontWeight: AppFontWeight.bold,
                         textAlign: TextAlign.center,
                         ),
-                      SizedBox(height: 50.sp),
+                      SizedBox(height: 30.sp),
                       AppTextField(
                         controller: model.email,
                         labelText: 'Email',
@@ -52,7 +52,6 @@ class RegisterScreen extends StatelessWidget {
                         obscureText: true,
                         controller: model.confirmPassword,
                         fontSize: AppFontSize.s12.sp,
-
                       ),
                       SizedBox(height: 20.h),
                       AuthTextButtons(
@@ -63,11 +62,10 @@ class RegisterScreen extends StatelessWidget {
                           await model.signUp();
                           model.setBusy(false);
                         },
-                        onBackToLoginPressed: model.isBusy ? null : () {
+                        onBackToLoginPressed: () {
                           navigationService.pushReplacement(const LoginScreen());
                         },
                       ),
-                      // SizedBox(height: 20.sp),
                     ],
                   ),
                 ),

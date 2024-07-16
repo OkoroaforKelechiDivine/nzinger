@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nzinga/app_themes/theme_manager.dart';
 
 class CircularIndicator extends StatelessWidget {
   final bool show;
@@ -16,8 +17,10 @@ class CircularIndicator extends StatelessWidget {
             Container(
               color: Colors.black,
             ),
-          const Center(
-            child: CircularProgressIndicator(),
+          Center(
+            child: CircularProgressIndicator(
+              color: AppColors.white,
+            ),
           ),
         ],
       ),
